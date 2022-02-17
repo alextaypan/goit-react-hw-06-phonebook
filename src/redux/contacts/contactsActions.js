@@ -1,6 +1,12 @@
-export const addContact = (contact) => ({
+import { nanoid } from "nanoid";
+
+export const addContact = ({ id, name, number }) => ({
   type: "contacts/add",
-  payload: contact,
+  payload: {
+    id: nanoid(),
+    name,
+    number,
+  },
 });
 
 export const removeContact = (id) => ({
