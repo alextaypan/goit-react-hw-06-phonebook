@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import s from "./ContactItem.module.css";
 
-export const ContactItem = ({ id, name, number, onClick }) => {
+const ContactItem = ({ id, name, number, onClick }) => {
   return (
     <li key={id} className={s.item}>
       <p>
@@ -20,3 +20,5 @@ ContactItem.propTypes = {
   number: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
+
+export default ContactItem;

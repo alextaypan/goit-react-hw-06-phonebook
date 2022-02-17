@@ -11,10 +11,10 @@ const itemsReducer = (state = [], { type, payload }) => {
   }
 };
 
-const filterReducer = (state = "", { type, payload }) => {
+const filterReducer = (state = [], { type, payload }) => {
   switch (type) {
     case "contacts/filter":
-      return payload;
+      return state.filter((el) => el.payload.toLowerCase());
     default:
       return state;
   }
