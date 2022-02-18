@@ -6,7 +6,6 @@ import { removeContact } from "../../redux/contacts/contactsActions";
 export const ContactList = () => {
   const contacts = useSelector((state) => state.contacts.items);
   const filter = useSelector((state) => state.contacts.filter);
-  console.log(contacts);
 
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
